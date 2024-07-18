@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+(% load static %)
+
+{% block extra_title %}
+    Login
+{% endblock %}
+
+
+{% block content %}
+
+{% block page_header %}
+
+
+{% endblock %}
+<div id="homepage-background">
+    <div class="page-container">
+        <div class="login-form-container">
+        <form method="POST" class="form-group">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn">Login</button>
+        </form>
+        </div>
+    </div>
+</div>
+<footer class="footer-home">
+    {% include 'includes/footer.html' %}
+  </footer>
+{% endblock %}

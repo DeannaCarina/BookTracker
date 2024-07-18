@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+(% load static %)
+
+{% block extra_title %}
+    Books
+{% endblock %}
+
+
+{% block content %}
+
+{% block page_header %}
+
+
+{% endblock %}
+<div class="main-content">
+
+<table class="home-table">
+    <tr>
+        <th>Book Title</th>
+        <th>Author</th>
+        <th>Progress</th>
+    </tr>
+    {% for book in books %}
+    
+        <tr class="clickable-row" onclick="window.location='{% url 'view_book' book.id %}';">
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            
+            <td>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner progress-bar" style="width:{{ book.Get_calculation }}%"></div>
+                </div>
+            </td>
+        </tr>
+    
+    {% endfor %}
+</table>
+
+</div>
+<footer class="dc-footer">
+    {% include 'includes/footer.html' %}
+  </footer>
+  <script type="text/javascript">
+
+</script>
+{% endblock %}

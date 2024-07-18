@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_title %}
+{{ book.title }} | {{ book.author }}
+{% endblock %}
+
+{% block content %}
+
+{% block page_header %}
+{% endblock %}
+<div class="main-content">
+
+        <div style="font-weight: 700; font-size: 4rem;">{{ book.title }}</div>
+        <div style="font-weight: 700; font-size: 2rem; margin-bottom: 5px;">{{ book.author }}</div>
+        {% if book.frontcover %}
+        <div class="frontcover-container"><img class="frontcover" src="{{ book.frontcover.url }}" alt="{{ book.title }}"></div>
+        {% endif %}
+        <div class="view-book-progress-container">
+            <td>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner progress-bar" style="width:{{ book.Get_calculation }}%"></div>
+                </div>
+            </td>
+        </div>
+        <div class="book-information">
+            <strong style="font-weight: 700;">Book information</strong>
+            <hr>
+            <table>
+                <tr>
+                    <td><strong style="font-weight: 700;">Published:</strong></td>
+                    <td>{{ book.published }}</td>
+                </tr>
+                <tr>
+                    <td><strong style="font-weight: 700;">Number of pages:</strong></td>
+                    <td id="total-pages">{{ book.pages }}</td>
+                </tr>
+                {% if book.progress > 0 %}
+                <tr>
+                    <td><strong style="font-weight: 700;">Current page:</strong></td>
+                    <td id="progress">{{ book.progress }}</td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td><strong style="font-weight: 700;">Genre(s):</strong></td>
+                    <td>{{ book.genre }}</td>
+                </tr>
+                {% if book.keypoints %}
+                <tr>
+                    <td><strong style="font-weight: 700;">Keypoints:</strong></td>
+                    <td>{{ book.keypoints }}</td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+
+
+
+
+
+        <a href="{% url 'edit_book' book.id %}"><button class="form-button button-green add-book-button edit-button">Edit Book</button></a>
+        
+</div>
+
+
+
+
+<footer class="dc-footer">
+    {% include 'includes/footer.html' %}
+  </footer>
+<script type="text/javascript">
+
+
+</script>
+{% endblock %}

@@ -1,0 +1,314 @@
+body {
+    font-weight: 300;
+}
+
+
+.frontcover {
+    width: 200px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.frontcover-container {
+    width: 250px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+.sidenav {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    background-color: lightslategray;
+    color: white;
+}
+.nav-link:hover {
+    color: white;
+}
+
+.bi {
+    font-size: 20px;
+}
+
+.top-nav-rule {
+    width: 100%;
+    height: 5px;
+    background-color: darkgray;
+    margin-bottom: 15px;
+}
+
+.sign-out {
+    text-decoration: none;
+    color: black;
+    margin-left: 12px;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 10px;
+}
+
+.sign-out:hover {
+    background-color: lightslategray;
+    color: white;
+}
+
+.main-content {
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    padding: 50px;
+}
+.dc-footer {
+    position: fixed;
+    bottom: 15px;
+    left: 300px;
+    width: calc(100vw - 300px);
+    text-align: center;
+}
+
+.home-table {
+    width: 100%;
+}
+
+.home-table tr th {
+    text-align: center;
+}
+
+.clickable-row:hover{
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+}
+
+.home-table tr td:first-child,
+.home-table tr td:nth-child(2) {
+    border-right: 0.5px solid rgb(94, 94, 94);
+}
+
+.home-table tr td {
+    padding: 15px;
+}
+
+.home-table tr td:nth-child(3) {
+    width: 400px;
+}
+
+.progress-bar-outer {
+    width: 300px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: auto auto;
+    margin-top: 5px;
+    background-color: white;
+}
+.progress-bar-inner {
+    height: 100%;
+    background-color: lime;
+    border-radius: 5px;
+}
+
+.view-book-progress-container{
+    width: 500px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.view-book-progress-container .progress-bar-outer{
+    width: 500px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 0px;
+}
+
+.view-book-progress-container .progress-bar-inner{
+    height: 100%;
+    background-color: lime;
+    border-radius: 10px;
+}
+
+.book-information {
+    width: 600px;
+    margin-top: 100px;
+}
+
+.book-information table tr td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.book-information table tr td:nth-child(1) {
+    width: 200px;
+}
+
+.book-information table tr td:nth-child(2) {
+    max-width: 200px;
+}
+
+.bi-person {
+    font-size: xx-large;
+}
+
+.counter {
+    border: 1px solid black;
+    padding: 14px;
+}
+
+.current-page-text {
+    font-size: xx-large;
+    font-weight: 700;
+    margin-right: 30px;
+}
+
+.counter-button {
+    height: 51px;
+}
+
+.form-button{
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+.reset-form {
+    background-color: lightgray;
+    margin-left: 15px;
+}
+
+.add-book-button {
+    background-color: rgb(233, 252, 220);
+    margin-right: 15px;
+}
+
+input[type="text"], input[type='number'], textarea {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2) inset;
+    width: 435px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+    font-weight: 700;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+textarea {
+    height: 60px;
+}
+
+.add-book-form input[type="file"] {
+    width: 360px;
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: small;
+    padding-bottom: 20px;
+}
+
+.add-book-form input::file-selector-button {
+    background-color: rgb(230, 230, 230);
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin-right: 10px;
+    float: right;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.edit-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.delete-button {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: rgb(245, 135, 135);
+}
+
+label {
+    display: none;
+}
+
+label[for="id_frontcover"] {
+    display: inline-block;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* Could be more or less, depending on screen size */
+    padding-bottom: 60px;
+  }
+  
+
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+  }
+
+  .delete-button-modal {
+    background-color: rgb(245, 135, 135);
+}
+
+.modal a {
+    margin: auto auto;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.modal button {
+    width: 160px;
+    height: 40px;
+    margin: auto auto;
+}
+
+.keep-button-modal {
+    background-color: rgb(230, 230, 230);
+}

@@ -1,0 +1,49 @@
+{% load static %}
+
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-black sidenav" style="background-color: lightgrey;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+        <span class="fs-4 m-3"><strong><i class="bi bi-person"></i> {{ user.first_name }} {{ user.last_name }}</strong></span>
+    </a>
+    <div class="top-nav-rule"></div>
+    <ul class="nav nav-pills flex-column mb-auto">
+
+        <li class="nav-item">
+            <a href="{% url 'home' %}" class="nav-link">
+                <i class="bi bi-house"></i> <span>Home</span>
+            </a>
+        </li>
+        <hr>
+        <li>
+            <a href="{% url 'add_book' %}" class="nav-link">
+                <i class="bi bi-journal-plus"></i> <span>Add new book</span>
+            </a>
+        </li>
+        <hr>
+        <li>
+            <a href="{% url 'books' %}" class="nav-link">
+                <i class="bi bi-book"></i> <span>All Books</span>
+            </a>
+        </li>
+        <hr>
+        <li>
+            <a href="{% url 'unread_books' %}" class="nav-link">
+                <i class="bi bi-journal-x"></i> <span>Unread books</span>
+            </a>
+        </li>
+        <hr>
+        <li>
+            <a href="{% url 'completed_books' %}" class="nav-link">
+                <i class="bi bi-journal-check"></i> <span>Completed books</span>
+            </a>
+        </li>
+        <hr>
+
+    </ul>
+    <hr>
+
+    <strong><a class="sign-out" href="#"><i class="bi bi-box-arrow-right"></i> Log out</a></strong>
+            
+
+
+</div>
