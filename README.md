@@ -60,6 +60,9 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>You can then drag and drop the files from the folder into your chosen IDE or view/edit them on your local machine</li>
     <li>In the console, run: pip install -r requirements.txt</li>
 </ol>
+
+### Deployment
+You are able to use a service such as GCP or AWS to host this application, or you can run it locally from your file explorer in a browser, or from within an IDE such as Github codespaces/Gitpod.
   
 ## Credits
 ### Code
