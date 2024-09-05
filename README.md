@@ -24,7 +24,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>The repo has now been copied into your own repos and you can work on it in your chosen IDE</li>
     <li>If you have any suggestions to make regards to the code to make the site better, you can put in a pull request</li>
     <li>In the console, run: pip install -r requirements.txt</li>
-    <li>If you want to create a web-app from the repo please follow the instructions in "Project Deployment"</li>
+    <li>If you want to create a web-app from the repo please see "Project Deployment"</li>
 </ol>
 
 ### Cloning the repo with GitPod
@@ -61,7 +61,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>In the console, run: pip install -r requirements.txt</li>
 </ol>
 
-### Deployment
+### Project Deployment
 You are able to use a service such as GCP or AWS to host this application, or you can run it locally from your file explorer in a browser, or from within an IDE such as Github codespaces/Gitpod using the usual Django/Python command: python manage.py runserver.
   
 ## Credits
