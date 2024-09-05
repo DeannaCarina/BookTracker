@@ -62,7 +62,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
 </ol>
 
 ### Deployment
-You are able to use a service such as GCP or AWS to host this application, or you can run it locally from your file explorer in a browser, or from within an IDE such as Github codespaces/Gitpod.
+You are able to use a service such as GCP or AWS to host this application, or you can run it locally from your file explorer in a browser, or from within an IDE such as Github codespaces/Gitpod using the usual Django/Python command: python manage.py runserver.
   
 ## Credits
 ### Code
