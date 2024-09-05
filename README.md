@@ -64,12 +64,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
 ## Credits
 ### Code
 All code used in this project was written and made with the help of Django's documentation.
-### Acknowledgements
-<ul>
-    <li>
-        To Jenny - a great mentor!
-    </li>
-</ul>
+
 
 ## Screenshots
 <img src="readmeassets/screen1.png">
