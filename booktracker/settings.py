@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     'books',
     'storages',
     'users',
-    'crispy_forms',
+    'home',
 ]
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

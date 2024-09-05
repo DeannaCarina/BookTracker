@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+(% load static %)
+
+{% block extra_title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+
+{% block page_header %}
+
+
+{% endblock %}
+
+
+{% if user.is_authenticated %}
+  
+{% else %}
+<div class="main-content" style="font-size: larger;">
+  Please log in.
+  <hr>
+  <a class="btn btn-outline-dark login-button" type="submit" href="{% url 'login' %}">Login</a>
+  </div>
+{% endif %}
+
+
+{% if user.is_authenticated %}
+  <div class="main-content" style="font-size: larger;">
+    
+  Hello, {{ user.first_name }} {{ user.last_name }}!
+  <br>
+  Here are the books you're currently reading:<br><br><br><br>
+  <table class="home-table">
+    <tr>
+      <th>Book Title</th>
+      <th>Author</th>
+      <th>Progress</th>
+    </tr>
+    {% for book in books %}
+    {% if book.progress > 0 and book.progress != book.pages %}
+      <tr class="clickable-row" onclick="window.location='{% url 'view_book' book.id %}';">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td id="total-pages" hidden>{{ book.pages }}</td>
+        {% if book.progress %}
+          <td id="progress" hidden>{{ book.progress }}</td>
+        {% endif %}
+        <td>
+          <div class="progress-bar-outer">
+            <div class="progress-bar-inner progress-bar" style="width:{{ book.Get_calculation }}%"></div>
+          </div>
+        </td>
+      </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+  </div>
+{% endif %}
+
+
+<footer class="dc-footer">
+  {% include 'includes/footer.html' %}
+</footer>
+<script type="text/javascript">
+
+  progress = document.getElementById("progress")
+
+  if (progress) {
+    progress = document.getElementById("progress").innerText;
+  } else {
+    progress = 0
+  }
+  total = document.getElementById("total-pages").innerText;
+  calculatedProgress = (progress / total) * 100
+  $("#progress-bar").css("width", calculatedProgress + "%");
+
+
+</script>
+{% endblock %}

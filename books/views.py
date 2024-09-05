@@ -10,14 +10,14 @@ from .forms import BookForm
 
 # Create your views here.
 
-def home(request):
-    """ A view to show all excursions, including sorting and searching """
+def index(request):
+    """ A view to render the home page """
 
     books = Book.objects.all()
     context = {
         'books': books,
     }
-    return render(request, 'books/home.html', context)
+    return render(request, 'home/index.html', context)
 
 
 def all_books(request):

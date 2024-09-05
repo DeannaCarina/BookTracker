@@ -3,11 +3,11 @@
 
 <div class="d-flex flex-column flex-shrink-0 p-3 text-black sidenav" style="background-color: lightgrey;">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-        <span class="fs-4 m-3"><strong><i class="bi bi-person"></i> {{ user.first_name }} {{ user.last_name }}</strong></span>
+        <span class="fs-4 m-3"><strong><i class="bi bi-person"></i> {% if user.is_authenticated %}{{ user.first_name }} {{ user.last_name }}{% else %}Book Tracker {% endif %}</strong></span>
     </a>
     <div class="top-nav-rule"></div>
     <ul class="nav nav-pills flex-column mb-auto">
-
+        {% if user.is_authenticated %}
         <li class="nav-item">
             <a href="{% url 'home' %}" class="nav-link">
                 <i class="bi bi-house"></i> <span>Home</span>
@@ -37,12 +37,22 @@
                 <i class="bi bi-journal-check"></i> <span>Completed books</span>
             </a>
         </li>
+           
         <hr>
-
+        {% endif %}
     </ul>
     <hr>
 
-    <strong><a class="sign-out" href="#"><i class="bi bi-box-arrow-right"></i> Log out</a></strong>
+
+{% if user.is_authenticated %}
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <strong><button class="sign-out" type="submit"><i class="bi bi-box-arrow-right"></i> Log out</button></strong>
+    </form>
+{% endif %}
+
+
+    
             
 
 

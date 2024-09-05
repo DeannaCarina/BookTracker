@@ -179,7 +179,7 @@ body {
     height: 51px;
 }
 
-.form-button{
+.form-button, #login-button{
     height: 50px;
     width: 200px;
     border: none;
@@ -193,12 +193,12 @@ body {
     margin-left: 15px;
 }
 
-.add-book-button {
+.add-book-button, #login-button {
     background-color: rgb(233, 252, 220);
     margin-right: 15px;
 }
 
-input[type="text"], input[type='number'], textarea {
+input[type="text"], input[type='number'], textarea, input[type='password']  {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2) inset;
     width: 435px;
     margin-top: 15px;
@@ -311,4 +311,9 @@ input[type='checkbox'] {
 
 .keep-button-modal {
     background-color: rgb(230, 230, 230);
+}
+
+.login-form-container {
+    padding-left: 320px;
+    padding-top: 30px;
 }
